@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <a-scene>
+
+        <!-- Box -->
+        <a-box color="#FFF" position="-1 0.5 -3" rotation="0 45 0" scale="1 1 1">
+        </a-box>
+
+        <a-assets>
+            <a-asset-item id="sword" src="Assets/3D Assets/Sword_Kailpodh/Sword.obj"></a-asset-item>
+            <a-asset-item id="sword-material"
+                src="Assets/3D Assets/Sword_Kailpodh/textures/RootNode_metallicRoughness.png">
+            </a-asset-item>
+        </a-assets> -->
+
+
+        <!-- Loading Sword-->
+        <a-obj-model src="#sword" scale="0.5 0.5 0.5" rotation="0 0 0">
+            <a-animation attribute="rotation" begin="mouseenter" to="0 90 0"></a-animation>
+        </a-obj-model>
+
+        <a-camera position="0 1 5">
+            <a-cursor scale="0.5 0.5 0.5" color="white" />
+        </a-camera>
+
+        <a-sky color="#26252D"></a-sky>
+
+    </a-scene>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+</body>
+
+</html>
